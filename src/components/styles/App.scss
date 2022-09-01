@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+
+@import './animation';
+@import './colors';
+
+*{
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+@import './Todo/TodoList';
+@import './Clocks/ClockAnalog';
+@import './Clocks/ClockDigital';
+@import './Calc/Calc'

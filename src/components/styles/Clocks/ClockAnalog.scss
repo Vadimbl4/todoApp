@@ -1,0 +1,115 @@
+.clockAnalogWrap {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  /* background: #47430f; */
+  background: $mainWhite;
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  .clockAnalog {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../_img/clockAnalog.png') center/cover;
+    border: 4px solid $secondWhite;
+    border-radius: 50%;
+    box-shadow: 2px 5px 5px 0.5px $shadowWhite,
+      inset 2px 5px 5px 0.5px $shadowWhite, 2px 5px 5px 0.5px $shadowWhite,
+      inset 2px 5px 5px 0.5px $shadowWhite;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: $arrowColor2White;
+      z-index: 111;
+    }
+
+    .hourAnalog {
+      position: absolute;
+
+      .hoursAnalog {
+        width: 70px;
+        height: 70px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 47px;
+          background: $arrowColor1White;
+          z-index: 10;
+          border-radius: 6px 6px 0 0;
+        }
+      }
+    }
+
+    .minuteAnalog {
+      position: absolute;
+
+      .minutesAnalog {
+        width: 100px;
+        height: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 50%;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 65px;
+          background: $arrowColor2White;
+          z-index: 11;
+          border-radius: 6px 6px 0 0;
+        }
+      }
+    }
+  }
+
+  .secondAnalog {
+    position: absolute;
+
+    .secondsAnalog {
+      width: 130px;
+      height: 130px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      border-radius: 50%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 90px;
+        background: $arrowColor3White;
+        border-radius: 6px 6px 0 0;
+        z-index: 12;
+      }
+    }
+  }
+}

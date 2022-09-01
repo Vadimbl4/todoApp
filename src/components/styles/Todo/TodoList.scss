@@ -1,0 +1,144 @@
+.wrapList {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .counter {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+
+  .wrapButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .addSec {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      input {
+        margin: 0 20px;
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 2px 5px 5px 0.5px $shadowWhite;
+        text-align: left;
+      }
+
+      .add {
+        background-color: $addButtonWhite;
+      }
+    }
+
+    .butSec {
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      background-color: $mainWhite;
+      border: none;
+      border-radius: 20px;
+      height: 50px;
+      width: 10vw;
+      font-size: 20px;
+      box-shadow: 2px 5px 5px 0.5px $shadowWhite;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: $secondWhite;
+        color: $textColorWhite;
+      }
+
+      &:active {
+        background-color: $activeColorWhite;
+        transform: scale(0.9);
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    .removeCheck {
+      background-color: $focusColorWhite;
+    }
+
+    .removeDone {
+      background-color: $doneColorWhite;
+    }
+
+    .cancel {
+      background-color: $cancelButtonWhite;
+    }
+  }
+
+  .item {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    background-color: $mainWhite;
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px 0.5px $shadowWhite;
+    transition: transform 0.3s ease-in-out;
+    user-select: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    label {
+      margin-left: auto;
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid $secondWhite;
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+.noTodos {
+  font-size: 30px;
+  margin: 0;
+}
+
+.lableDone {
+  background-color: $addButtonWhite !important;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.itemCompleted {
+  background-color: $doneColorWhite !important;
+}
+
+.itemFocus {
+  background-color: $focusColorWhite !important;
+}
