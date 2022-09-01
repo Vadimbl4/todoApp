@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/styles/App.scss'
+import React from 'react';
+import TodoList from './components/TodoList/TodoList';
+import ClockAnalog from './components/Clocks/ClockAnalog';
+import ClockDigital from './components/Clocks/ClockDigital';
+import Calculator from './components/Calculator/Calculator'
+
+let config = {
+  analogClock: false,
+  digitalClock: false,
+  todoList: true,
+  calculator: false,
+}
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className='container'>
+      {config.todoList ? <TodoList/> : null}
+      {config.analogClock ? <ClockAnalog/> : null}
+      {config.digitalClock ? <ClockDigital/> : null}
+      {config.calculator ? <Calculator/> : null}
+      </div>
+      
+    </>
   );
 }
 
